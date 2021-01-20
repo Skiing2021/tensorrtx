@@ -10,7 +10,12 @@ set(CMAKE_BUILD_TYPE Debug)
 
 find_package(CUDA REQUIRED)
 
-include_directories(${PROJECT_SOURCE_DIR}/include)
+if (WIN32)
+    include_directories(${PROJECT_SOURCE_DIR}/include-win32)
+else()
+    include_directories(${PROJECT_SOURCE_DIR}/include)
+endif()
+
 # include and link dirs of cuda and tensorrt, you need adapt them if yours are different
 # cuda
 if (WIN32)
