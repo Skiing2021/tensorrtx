@@ -7,6 +7,7 @@ add_definitions(-std=c++11)
 option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 find_package(CUDA REQUIRED)
 
